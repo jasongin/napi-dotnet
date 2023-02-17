@@ -75,3 +75,11 @@ public class ClassObject
 
     public ClassObject ThisObject() => this;
 }
+
+[JSExport]
+public enum TestEnum
+{
+    Zero,
+    One,
+    Two,
+}
