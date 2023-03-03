@@ -1,12 +1,15 @@
+﻿
 using System;
 
-namespace NodeApi.TestCases;
+namespace NodeApi.Examples;
 
 public static class Hello
 {
     /// <summary>
-    /// Gets a greeting string - an example of Node.js calling .NET.
+    /// Gets a greeting string for testing.
     /// </summary>
+    /// <param name="greeter">Name of the greeter.</param>
+    /// <returns>A greeting with the name.</returns>
     [JSExport("hello")]
     public static string Test(string greeter)
     {

@@ -6,10 +6,19 @@
     <OutputType>Exe</OutputType>
     <IsPackable>true</IsPackable>
     <NoWarn>$(NoWarn);SYSLIB1045</NoWarn><!-- Use GeneratedRegexAttribute -->
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- Package the generator in the analyzer directory of the nuget package -->
+    <None Include="$(OutputPath)\NodeApi.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    <None Include="$(OutputPath)\NodeApi.Generator.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    <None Include="build\NodeApi.Generator.props" Pack="true" PackagePath="build\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" />
     <PackageReference Include="System.Reflection.MetadataLoadContext" />
   </ItemGroup>
 
@@ -18,7 +27,7 @@
     https://github.com/dotnet/roslyn-sdk/blob/main/samples/CSharp/SourceGenerators/SourceGeneratorSamples/CSharpSourceGeneratorSamples.csproj
   -->
   <ItemGroup>
-    <ProjectReference Include="..\Runtime\NodeApi.Runtime.csproj" GeneratePathProperty="true" PrivateAssets="all" />
+    <ProjectReference Include="..\Runtime\NodeApi.Runtime.csproj" GeneratePathProperty="true" PrivateAssets="none" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -1,0 +1,4 @@
+<Project>
+  <!-- Don't include the project root Directory.Build.props; just get the default rid. -->
+  <Import Project="../../rid.props" />
+</Project>

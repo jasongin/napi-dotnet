@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <!-- Always write *.NodeApi.g.cs in the obj/ directory. -->
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+  </PropertyGroup>
+
+</Project>

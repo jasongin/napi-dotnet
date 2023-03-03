@@ -1,0 +1,10 @@
+<Project>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)..\native\$(RuntimeIdentifier)\NodeApi.node"
+      CopyToOutputDirectory="PreserveNewest" />
+    <None Include="$(MSBuildThisFileDirectory)..\native\$(RuntimeIdentifier)\NodeApi.runtimeconfig.json"
+      CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

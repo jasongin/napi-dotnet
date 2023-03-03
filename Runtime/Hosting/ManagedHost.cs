@@ -103,6 +103,7 @@ public sealed class ManagedHost : IDisposable
         string assemblyFilePath = (string)args[0];
         Trace($"> ManagedHost.LoadModule({assemblyFilePath})");
 
+        assemblyFilePath = System.IO.Path.GetFullPath(assemblyFilePath);
         if (_loadedModules.TryGetValue(assemblyFilePath, out JSReference? exportsRef))
         {
             Trace("< ManagedHost.LoadModule() => already loaded");

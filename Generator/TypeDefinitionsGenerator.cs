@@ -11,6 +11,9 @@ using Microsoft.CodeAnalysis.Text;
 
 namespace NodeApi.Generator;
 
+// This class is packaged with the analyzer, but runs as a separate command-line tool.
+#pragma warning disable RS1035 // Do not do file IO in alayzers
+
 // An analyzer bug results in incorrect reports of CA1822 against methods in this class.
 #pragma warning disable CA1822 // Mark members as static
 

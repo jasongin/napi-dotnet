@@ -45,6 +45,15 @@
       DestinationFiles="$(ManagedTargetPath)" />
     <Copy SourceFiles="$(PublishDir)..\$(TargetName).pdb"
       DestinationFiles="$(PublishDir)$(TargetName).pdb" />
+
   </Target>
+
+  <ItemGroup>
+    <None Include="build\NodeApi.props" Pack="true" PackagePath="build\" />
+    <None Include="$(PublishDir)$(TargetName).node" Pack="true"
+      PackagePath="native\$(RuntimeIdentifier)" />
+    <None Include="$(PublishDir)$(TargetName).runtimeconfig.json" Pack="true"
+      PackagePath="native\$(RuntimeIdentifier)" />
+  </ItemGroup>
 
 </Project>
