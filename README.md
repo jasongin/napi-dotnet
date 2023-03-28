@@ -1,5 +1,10 @@
 # Call .NET APIs from JavaScript
 
+## :truck: Migrated to https://github.com/microsoft/node-api-dotnet :truck:
+This repo is no longer maintained and will be hidden or deleted soon.
+
+---
+
 Call nearly any .NET APIs in-proc from JavaScript code, with high performance and TypeScript
 type-checking. The interop uses [Node API](https://nodejs.org/api/n-api.html) so it is compatible
 with any Node.js version (without rebuilding) or other JavaScript engine that supports Node API.
